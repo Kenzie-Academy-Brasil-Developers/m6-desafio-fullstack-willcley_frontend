@@ -1,0 +1,12 @@
+.editContactsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+
+    .formsContainer {
+        display: flex;
+        gap: 2rem;
+    }
+}
