@@ -1,6 +1,6 @@
 import style from "./registerForm.module.scss";
 import { useContext } from "react";
-import { UserContext } from "../../../providers/UserContext";
+import { LoginContext } from "../../../providers/LoginContext";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerSchema } from "./registerSchema";
@@ -14,7 +14,7 @@ export const RegisterForm = () => {
         formState: { errors },
     } = useForm({ resolver: zodResolver(registerSchema) });
     
-    const { userRegister } = useContext(UserContext);
+    const { userRegister } = useContext(LoginContext);
 
     const submit = (formData) => {
         userRegister(formData);

@@ -4,14 +4,14 @@ import { FaGear } from "react-icons/fa6";
 import { IoMdExit } from "react-icons/io";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { useContext } from "react";
-import { UserContext } from "../../providers/UserContext";
+import { LoginContext } from "../../providers/LoginContext";
 
 export const Header = () => {
     const userPerfilImg = null;
     const clientName = localStorage.getItem("@CLIENT:NAME");
     const userNameLetter = clientName[0].toUpperCase();
 
-    const { endpoint, logout } = useContext(UserContext);
+    const { endpoint, logout } = useContext(LoginContext);
 
     return (<>
         <header className={style.header}>

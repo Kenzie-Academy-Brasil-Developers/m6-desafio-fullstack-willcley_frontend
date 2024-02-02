@@ -2,9 +2,9 @@ import { createContext, useState } from "react";
 import { api } from "../services/api";
 import { useNavigate } from "react-router-dom";
 
-export const UserContext = createContext({});
+export const LoginContext = createContext({});
 
-export const UserProvider = ({ children }) => {
+export const LoginProvider = ({ children }) => {
     const navigate = useNavigate();
 
     const endpoint = window.location.pathname;
@@ -45,13 +45,13 @@ export const UserProvider = ({ children }) => {
     };
 
     return (
-        <UserContext.Provider value={{
+        <LoginContext.Provider value={{
             endpoint,
             userLogin,
             userRegister,
             logout,
         }}>
             {children}
-        </UserContext.Provider>
+        </LoginContext.Provider>
     );
 };

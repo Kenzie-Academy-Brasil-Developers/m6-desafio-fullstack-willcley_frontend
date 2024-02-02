@@ -1,6 +1,6 @@
 import style from "./loginForm.module.scss";
 import { useContext } from "react";
-import { UserContext } from "../../../providers/UserContext";
+import { LoginContext } from "../../../providers/LoginContext";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema } from "./loginSchema";
@@ -15,7 +15,7 @@ export const LoginForm = () => {
     } = useForm({
         resolver: zodResolver(loginSchema)
     });
-    const { userLogin } = useContext(UserContext);
+    const { userLogin } = useContext(LoginContext);
 
     const submit = (formData) => {
         userLogin(formData);

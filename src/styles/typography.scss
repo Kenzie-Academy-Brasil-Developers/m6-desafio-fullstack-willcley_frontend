@@ -2,6 +2,14 @@ span {
     font-size: 0.75rem;
 }
 
+.errorMessage {
+    display: flex;
+    justify-content: center;
+    color: var(--color-error);
+    width: 100%;
+    padding: 0.25rem;
+}
+
 .title1, .title2, .title3 {
     color: var(--color-grey-0);
 }
@@ -19,7 +27,7 @@ span {
 }
 
 .title3 {
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .text1 {

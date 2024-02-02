@@ -1,0 +1,25 @@
+.editContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.editNav {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 2.25rem;
+
+    button {
+        background: transparent;
+        color: var(--color-grey-1);
+        border: none;
+    }
+
+    .activated {
+        color: var(--color-primary);
+        border-bottom: 1px solid var(--color-primary);
+    }
+}

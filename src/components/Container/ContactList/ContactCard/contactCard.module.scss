@@ -1,0 +1,33 @@
+.contactCard {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    border: 1px solid var(--color-primary-dark);
+    border-radius: 0.5rem;
+
+    .contactPerfil {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+
+        .contactImg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--color-primary-dark);
+            width: 2.5rem;
+            height: 2.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 50%;
+        }
+    }
+
+    .contactInfos {
+        display: flex;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+}
