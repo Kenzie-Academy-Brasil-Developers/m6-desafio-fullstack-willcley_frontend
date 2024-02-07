@@ -4,6 +4,7 @@ import { ClientContext } from "../../providers/ClientContext";
 import { TemplatePage } from "../../components/TemplatePage";
 import { InfoList } from "../../components/Container/InfoList";
 import { ContatcList } from "../../components/Container/ContactList";
+import { useNavigate } from "react-router-dom";
 
 export const HomePage = () => {
     const clientName = localStorage.getItem("@CLIENT:NAME");
@@ -14,9 +15,13 @@ export const HomePage = () => {
         getContacts,
     } = useContext(ClientContext);
 
+    const navigate = useNavigate();
+
     useEffect(() => {
-        getClient();
-        getContacts();
+        clientName ? () => {
+            getClient();
+            getContacts();
+        } : navigate("/login");
     }, []);
 
     return (

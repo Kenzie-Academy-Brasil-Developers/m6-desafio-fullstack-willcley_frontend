@@ -1,13 +1,18 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { api } from "../services/api";
 import { useNavigate } from "react-router-dom";
+import { QueryClientContext } from "@tanstack/react-query";
 
 export const LoginContext = createContext({});
 
 export const LoginProvider = ({ children }) => {
     const navigate = useNavigate();
-
     const endpoint = window.location.pathname;
+
+    const {
+        getClient,
+        getContacts,
+    } = useContext(QueryClientContext);
 
     const userLogin = async (formData) => {
         try {
@@ -15,6 +20,8 @@ export const LoginProvider = ({ children }) => {
             localStorage.setItem("@TOKEN", data.token);
             localStorage.setItem("@CLIENT:ID", data.client.id);
             localStorage.setItem("@CLIENT:NAME", data.client.fullname);
+            await getClient;
+            await getContacts;
             setTimeout(() => {
                 navigate("/");
             }, 1000);
