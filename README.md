@@ -1,8 +1,57 @@
-# React + Vite
+# Documentação da Aplicação
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tabela de conteúdos
 
-Currently, two official plugins are available:
+- [Visão Geral](#1-visão-geral)
+- [Início Rápido](#2-início-rápido)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## 1. Visão Geral
+
+Visão geral do projeto, um pouco das tecnologias usadas.
+
+- [React.js](https://react.dev)
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [SASS](https://sass-lang.com)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [axios](https://axios-http.com/ptbr/docs/intro)
+- [Zod](https://zod.dev)
+
+---
+
+## 2. Início Rápido
+
+### 2.1. Instalando Dependências
+
+Clone o projeto em sua máquina e instale as dependências com o comando:
+
+> - Pelo yarn:
+>
+> ```shell
+> yarn
+> ```
+>
+> - Pelo npm:
+>
+> ```shell
+> npm install
+> ```
+
+### 2.2. Rodar Projeto
+
+Rode o projeto com o comando:
+
+> - Pelo yarn:
+>
+> ```shell
+> yarn run dev
+> ```
+>
+> - Pelo npm:
+>
+> ```shell
+> npm run dev
+> ```
+
+---
