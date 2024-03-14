@@ -146,8 +146,7 @@ export const ClientProvider = ({ children }) => {
                 "/contacts",
                 {
                     ...formData,
-                    phones: "[1234]",
-                    clientId
+                    clientId,
                 },
                 {
                     headers: {
